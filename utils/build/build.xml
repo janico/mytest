@@ -35,7 +35,7 @@
         <copy file="${project.basedir}/workspace/build/package/mytest.tar.gz" todir="/var/www/mytest/livraison/"/>
     </target>
 	
-	<target name="deploy-mytest"> <!-- mytest -->
+	<target name="deploy-mytest"> <!--  mytest  -->
 		<echo msg="sudo chown -R hudson:nogroup /var/www/mytest/" />
 		<exec command="sudo chown -R hudson:nogroup /var/www/mytest/" logoutput="true" />
 		
@@ -43,6 +43,7 @@
 		<exec command="chmod -R 775 /var/www/mytest/" logoutput="true" />
 		
 		<untar  file="/var/www/mytest/livraison/mytest.tar.gz" todir="/var/www/mytest/" />
+		
 		
     </target>
 
