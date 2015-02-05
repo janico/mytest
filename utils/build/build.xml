@@ -30,8 +30,7 @@
 
     
 	 <target name="package">
-        <tar destfile="${project.basedir}/workspace/build/package/mytest.tar.gz" compression="gzip" 
-                     excludes="" >
+        <tar destfile="${project.basedir}/workspace/build/package/mytest.tar.gz" compression="gzip" >
 					 <fileset dir="${project.basedir}/workspace/">
 						<exclude name="new1/**" />
 						<exclude name=".git/**" />
