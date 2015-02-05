@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="mytest" default="ci" basedir="../../..">
+    <property name="source" value="workspace" />
+ 
+    <target name="ci"
+            description="Tâche principale d'intégration continue"
+            depends="clean,qa"/>
+ 
+    <target name="clean" description="Vide les répertoires d'artefacts">
+        <delete dir="${project.basedir}/workspace/build/api" />
+        <delete dir="${project.basedir}/workspace/build/code-browser" />
+        <delete dir="${project.basedir}/workspace/build/coverage" />
+        <delete dir="${project.basedir}/workspace/build/logs" />
+        <delete dir="${project.basedir}/workspace/build/pdepend" />
+        <delete dir="${project.basedir}/workspace/build/package" />
+        <delete dir="${project.basedir}/workspace/build/test" />
+	 
+        <mkdir dir="${project.basedir}/workspace/build/api" />
+        <mkdir dir="${project.basedir}/workspace/build/code-browser" />
+        <mkdir dir="${project.basedir}/workspace/build/coverage" />
+        <mkdir dir="${project.basedir}/workspace/build/logs" />
+        <mkdir dir="${project.basedir}/workspace/build/pdepend" />
+        <mkdir dir="${project.basedir}/workspace/build/package" />
+        <mkdir dir="${project.basedir}/workspace/build/test" />
+    </target>
+ 
+    <target name="qa" description="Lance les outils d'analyse">
+        <phingcall target="package" />
+    </target>
+
+    
+	 <target name="package">
+        <tar destfile="${project.basedir}/workspace/build/package/fia.tar.gz" compression="gzip" 
+                     excludes=".svn/**" basedir="${project.basedir}/workspace/site/"/>
+        <copy file="${project.basedir}/workspace/build/package/fia.tar.gz" todir="/var/www/mytest/livraison/"/>
+    </target>
+
+
+</project>
