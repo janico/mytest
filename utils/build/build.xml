@@ -42,7 +42,7 @@
 	
 	<target name="deploy-mytest"> <!--  mytest  -->
 		<echo msg="sudo chown -R hudson:nogroup /var/www/mytest/" />
-		<exec command="sudo chown -R hudson:nogroup /var/www/mytest/" logoutput="true" />
+		<exec command="su chown -R hudson:nogroup /var/www/mytest/" logoutput="true" />
 		
 		<echo msg="chmod -R 775 /var/www/mytest/" />
 		<exec command="chmod -R 775 /var/www/mytest/" logoutput="true" />
