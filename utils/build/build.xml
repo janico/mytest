@@ -31,7 +31,12 @@
     
 	 <target name="package">
         <tar destfile="${project.basedir}/workspace/build/package/mytest.tar.gz" compression="gzip" 
-                     excludes=".git/**" basedir="${project.basedir}/workspace/"/>
+                     excludes="" >
+					 <fileset dir="${project.basedir}/workspace/">
+						<exclude name="new1/**" />
+						<exclude name=".git/**" />
+					</fileset>
+		</tar>
         <copy file="${project.basedir}/workspace/build/package/mytest.tar.gz" todir="/var/www/mytest/livraison/"/>
     </target>
 	
