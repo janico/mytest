@@ -43,25 +43,6 @@
 		<exec command="chmod -R 775 /var/www/mytest/" logoutput="true" />
 		
 		<untar  file="/var/www/mytest/livraison/mytest.tar.gz" todir="/var/www/mytest/" />
-		<!--
-		<echo msg="rm -Rf /var/www/mytest/app/cache/*" />
-		<exec command="rm -Rf /var/www/mytest/app/cache/*" logoutput="true" />
-		
-		<echo msg="php /var/www/mytest/app/console doctrine:schema:update --force" />
-		<exec command="php /var/www/mytest/app/console doctrine:schema:update --force" />
-	
-		<echo msg="php /var/www/mytest/app/console assets:install web" />
-		<exec command="php /var/www/mytest/app/console assets:install web" />
-			
-		<echo msg="chmod -R 775 /var/www/mytest/app/cache/dev" />
-		<exec command="chmod -R 775 /var/www/mytest/app/cache/dev" logoutput="true" />
-		
-		<echo msg="find /var/www/mytest/ -name '.svn' -type d -exec rm -rf {} \;" />
-		<exec command="find /var/www/mytest/ -name '.svn' -type d -exec rm -rf {} \;" logoutput="true" />
-		
-		<echo msg="sudo chown -R www-data:www-data /var/www/mytest/" />
-		<exec command="sudo chown -R www-data:www-data /var/www/mytest/" logoutput="true" />
-		-->
 		
     </target>
 
