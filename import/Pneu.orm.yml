@@ -1,0 +1,171 @@
+ImportManager\CoreBundle\Entity\Pneu:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        ean:
+            type: string
+            length: '24'
+
+        ipc_code:
+            type: string
+            length: '24'
+
+        brand_name:
+            type: string
+            length: '24'
+
+        distributor_code:
+            type: string
+            length: '24'
+
+        price:
+            type: string
+            length: '24'
+
+        quantity:
+            type: string
+            length: '24'
+
+        category:
+            type: string
+            length: '24'
+
+        category2:
+            type: string
+            length: '24'
+
+        article_name:
+            type: string
+            length: '24'
+
+        prefix:
+            type: string
+            length: '24'
+
+        width:
+            type: string
+            length: '24'
+
+        sep:
+            type: string
+            length: '24'
+
+        ratio:
+            type: string
+            length: '24'
+
+        structure:
+            type: string
+            length: '24'
+
+        seat:
+            type: string
+            length: '24'
+
+        suffix:
+            type: string
+            length: '24'
+
+        load_index:
+            type: string
+            length: '24'
+
+        speed_index:
+            type: string
+            length: '24'
+
+        index2:
+            type: string
+            length: '24'
+
+        tube:
+            type: string
+            length: '24'
+
+        flanc1:
+            type: string
+            length: '24'
+
+        flanc2:
+            type: string
+            length: '24'
+
+        flanc3:
+            type: string
+            length: '24'
+
+        sculpture:
+            type: string
+            length: '24'
+
+        sculpture_complement:
+            type: string
+            length: '24'
+
+        run_flat:
+            type: string
+            length: '24'
+
+        position:
+            type: string
+            length: '24'
+
+        utilisation:
+            type: string
+            length: '24'
+
+        choice:
+            type: string
+            length: '24'
+
+        oe:
+            type: string
+            length: '24'
+
+        made_in:
+            type: string
+            length: '24'
+
+        dot:
+            type: string
+            length: '24'
+
+        description:
+            type: string
+            length: '24'
+
+        brand_id:
+            type: string
+            length: '24'
+
+        season:
+            type: string
+            length: '24'
+
+        weight:
+            type: string
+            length: '24'
+
+        temp1:
+            type: string
+            length: '24'
+        
+        fuellef:
+            type: string
+            length: '24'
+        
+        wetgripp:
+            type: string
+            length: '24'
+        
+        extnoise:
+            type: string
+            length: '24'
+
+    lifecycleCallbacks: {  }
